@@ -1,0 +1,30 @@
+import time
+
+print(
+    "Welcome to unnati computers technical support \n Myself Riya can i know your name?"
+)
+x = input(">")
+print(x)
+print(f"Hello {x} how can i help you today")
+print(
+    "please select the following type of issue from below!\n 1.Software issue\t 2.Hardware issue"
+)
+y = input(">")
+if y == '1' or y == 'software issue':
+  print(
+      "please select the product your facing the issue \n 1.TALLY \n 2.MSoffice package \n 3.WINDOWS OS"
+  )
+  y = input(">")
+  if y == '1' or y == 'tally':
+    print(
+        "you have selected issue with TALLY application Please discribe your issue!"
+    )
+    y = input(">")
+    delay = time.sleep(3)
+    print("we are looking on your issue!")
+    print("enter your email address \'ex:abc@gmail.com'")
+    email = input('>')
+    delay = time.sleep(3)
+
+    print(
+        "our Team as raised a ticket! on your issue will get in touch  sortly")

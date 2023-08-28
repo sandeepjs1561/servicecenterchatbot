@@ -3,9 +3,9 @@ import time
 print(
     "Welcome to unnati computers technical support \n Myself Riya can i know your name?"
 )
-x = input(">")
-print(x)
-print(f"Hello {x} how can i help you today")
+names = input(">")
+
+print(f"Hello {names} how can i help you today")
 print(
     "please select the following type of issue from below!\n 1.Software issue\t 2.Hardware issue"
 )
@@ -28,3 +28,4 @@ if y == '1' or y == 'software issue':
 
     print(
         "our Team as raised a ticket! on your issue will get in touch  sortly")
+    print(f"Thank you!!{names}")

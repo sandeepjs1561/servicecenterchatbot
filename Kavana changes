@@ -1,0 +1,36 @@
+print(
+    "Welcome to unnati computers technical support \n Myself nithin can i know your name?"
+)
+names = input(">")
+
+print(f"Hello {names} how can i help you today")
+print(
+    "please select the following type of issue from below!\n 1.Software issue\t 2.Hardware issue"
+)
+y = input(">")
+if y == '1' or y == 'software issue':
+  print(
+      "please select the product your facing the issue \n 1.display issue \n 2.MSoffice package \n 3.WINDOWS OS"
+  )
+  y = input(">")
+  if y == '1' or y == "display issue":
+    print(
+        "you have selected issue with display application Please discribe your issue!"
+    )
+    y = input(">")
+
+    print("we are looking on your issue!")
+    z=input(a.quality of display b.clarity of screen c.touch issue)
+    print("z")
+   if z == "a" z == "b" z == "c"
+     print("if there is black in pc check monitor once, re-start pc, unplug the cables")
+   elif:
+     print("go to control panel,go to system next click on display,see the cable connection it is right or not")
+   elif:
+     ("turn on window safe mode, sometimes problem with app or program")
+   else:
+     print("we are surely with this come back with this  solutions...!tq wlc back☺️")
+print(
+        "our Team has raised a ticket! on your issue will get in touch  sortly"
+    )
+    print(f"Thank you!!{names}")

@@ -1,7 +1,8 @@
 import time
 import pandas as pd
+import numpy.random as np
 data=pd.read_csv('unnatidatabase.csv')#
-hey={'NAME':[],'ISSUE':[],'EMAIL':[]};
+hey={'NAME':[],'ISSUE':[],'EMAIL':[],'ticket_id':[]};
 # data=pd.DataFrame(hey)
 #data.to_csv('unnatidatabase.csv', mode='a', index=False, header=False)
 
@@ -30,6 +31,7 @@ while True:
             delay = time.sleep(1)
             print("enter your email address \'ex:abc@gmail.com'")
             email = input('>')
+            ticketno=np.randint(1,100)
             for i in range(2):
                 print(".", end="")
 
@@ -39,7 +41,7 @@ while True:
                 print()
 
             print(
-                f"our Team has raised a ticket! on your issue will get in touch  sortly\n  Response will be given to {email}\n\n"
+                f"our Team has raised a ticket!{ticketno} on your issue will get in touch  sortly\n  Response will be given to {email}\n\n"
             )
 
         if option == '2' or option == 'msoffice':
@@ -164,5 +166,14 @@ while True:
     hey['NAME'].append(names)
     hey['ISSUE'].append(issue)
     hey['EMAIL'].append(email)
+    hey['ticket_id'].append(ticketno)
 data = pd.DataFrame(hey)
 data.to_csv('unnatidatabase.csv', mode='a', index=False, header=False)
+print("RATE US (1 - 5)")
+rating=input(">")
+data=pd.read_csv('feedbackdata.csv')
+hey={'NAME':[],'rating':[]};
+hey['NAME'].append(names)
+hey['rating'].append(rating)
+reviews=pd.DataFrame(hey)
+reviews.to_csv('feedbackdata.csv',mode='a',index=False,header=False)

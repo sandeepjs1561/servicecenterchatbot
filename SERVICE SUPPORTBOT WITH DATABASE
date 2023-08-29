@@ -3,8 +3,8 @@ import pandas as pd
 import numpy.random as np
 data=pd.read_csv('unnatidatabase.csv')#
 hey={'NAME':[],'ISSUE':[],'EMAIL':[],'ticket_id':[]};
-# data=pd.DataFrame(hey)
-#data.to_csv('unnatidatabase.csv', mode='a', index=False, header=False)
+data=pd.DataFrame(hey)
+data.to_csv('unnatidatabase.csv', mode='a', index=False, header=False)
 
 
 print(
@@ -54,6 +54,7 @@ while True:
             delay = time.sleep(1)
             print("enter your email address \'ex:abc@gmail.com'")
             email = input('>')
+            ticketno = np.randint(1, 100)
             for i in range(2):
                 print(".", end="")
 
@@ -63,7 +64,7 @@ while True:
                 print()
 
             print(
-                f"our Team has raised a ticket! on your issue will get in touch  sortly\n  Response will be given to {email}\n\n"
+                f"our Team has raised a ticket!{ticketno} on your issue will get in touch  sortly\n  Response will be given to {email}\n\n"
             )
 
         if option == '3' or option == 'windowsos':
@@ -77,6 +78,7 @@ while True:
             delay = time.sleep(1)
             print("enter your email address \'ex:abc@gmail.com'")
             email = input('>')
+            ticketno = np.randint(1, 100)
             for i in range(2):
                 print(".", end="")
 
@@ -86,7 +88,7 @@ while True:
                 print()
 
             print(
-                f"our Team has raised a ticket! on your issue will get in touch  sortly\n  Response will be given to {email}\n\n"
+                f"our Team has raised a ticket!{ticketno} on your issue will get in touch  sortly\n  Response will be given to {email}\n\n"
             )
 
     elif y == '2' or y == 'hardware issue':
@@ -104,6 +106,7 @@ while True:
             delay = time.sleep(1)
             print("enter your email address \'ex:abc@gmail.com'")
             email = input('>')
+            ticketno = np.randint(1, 100)
             for i in range(2):
                 print(".", end="")
 
@@ -112,7 +115,7 @@ while True:
                     delay = time.sleep(2)
                 print()
             print(
-                f"our Team has raised a ticket! on your issue will get in touch  sortly\n  Response will be given to {email}\n\n"
+                f"our Team has raised a ticket!{ticketno} on your issue will get in touch  sortly\n  Response will be given to {email}\n\n"
             )
 
         if option == '2' or option == 'No audio':
@@ -134,7 +137,7 @@ while True:
                 print()
 
             print(
-                f"our Team has raised a ticket! on your issue will get in touch  sortly\n  Response will be given to {email}\n\n"
+                f"our Team has raised a ticket!{ticketno} on your issue will get in touch  sortly\n  Response will be given to {email}\n\n"
             )
 
         if option == '3' or option == 'Noise from the cabinet':
@@ -147,6 +150,7 @@ while True:
             delay = time.sleep(1)
             print("enter your email address \'ex:abc@gmail.com'")
             email = input('>')
+            ticketno = np.randint(1, 100)
             for i in range(2):
                 print(".", end="")
 
@@ -155,18 +159,15 @@ while True:
                     delay = time.sleep(2)
                 print()
             print(
-                f"our Team has raised a ticket! on your issue will get in touch  sortly\n  Response will be given to {email}\n\n"
+                f"our Team has raised a ticket!{ticketno} on your issue will get in touch  sortly\n  Response will be given to {email}\n\n"
             )
-
-
-
     if y == '3' or y == 'exit':
         print(f"Thank you!!{names}")
         break
     hey['NAME'].append(names)
     hey['ISSUE'].append(issue)
     hey['EMAIL'].append(email)
-    hey['ticket_id'].append(ticketno)
+    hey['ticket_id'].append(ticketno)    
 data = pd.DataFrame(hey)
 data.to_csv('unnatidatabase.csv', mode='a', index=False, header=False)
 print("RATE US (1 - 5)")

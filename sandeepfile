@@ -4,30 +4,151 @@ print(
     "Welcome to unnati computers technical support \n Myself Riya can i know your name?"
 )
 names = input(">")
-
 print(f"Hello {names} how can i help you today")
-print(
-    "please select the following type of issue from below!\n 1.Software issue\t 2.Hardware issue"
-)
-y = input(">")
-if y == '1' or y == 'software issue':
-  print(
-      "please select the product your facing the issue \n 1.TALLY \n 2.MSoffice package \n 3.WINDOWS OS"
-  )
-  y = input(">")
-  if y == '1' or y == 'tally':
+while True:
     print(
-        "you have selected issue with TALLY application Please discribe your issue!"
-    )
+        "please select the following type of issue from below!\n 1.Software issue\t 2.Hardware issue \t 3.exit")
     y = input(">")
-    delay = time.sleep(3)
-    print("we are looking on your issue!")
-    print("enter your email address \'ex:abc@gmail.com'")
-    email = input('>')
-    for i in (1,2):
-      print("...")
-      delay=time.sleep(1)
+    if y == '1' or y == 'software issue':
+        print(
+            "please select the product your facing the issue \n 1.TALLY \n 2.MSoffice package \n 3.WINDOWS OS"
+        )
+        y = input(">")
+        if y == '1' or y == 'tally':
+            print(
+                "you have selected issue with TALLY application Please discribe your issue!"
+            )
+            y = input(">")
 
-    print(
-        "our Team as raised a ticket! on your issue will get in touch  sortly")
-    print(f"Thank you!!{names}")
+            print("we are looking on your issue!")
+            delay = time.sleep(1)
+            print("enter your email address \'ex:abc@gmail.com'")
+            email = input('>')
+            for i in range(3):
+                print(".", end="")
+
+                for j in range(2):
+                    print(".", end="")
+                    delay = time.sleep(1)
+                print()
+
+            print(
+                f"our Team has raised a ticket! on your issue will get in touch  sortly\n  Response will be given to {email}\n\n"
+            )
+
+        if y == '2' or y == 'msoffice':
+            print(
+                "you have selected issue with Msoffice application Please discribe your issue!"
+            )
+            y = input(">")
+
+            print("we are looking on your issue!")
+            delay = time.sleep(1)
+            print("enter your email address \'ex:abc@gmail.com'")
+            email = input('>')
+            for i in range(3):
+                print(".", end="")
+
+                for j in range(2):
+                    print(".", end="")
+                    delay = time.sleep(1)
+                print()
+
+            print(
+                f"our Team has raised a ticket! on your issue will get in touch  sortly\n  Response will be given to {email}\n\n"
+            )
+
+        if y == '3' or y == 'windowsos':
+            print(
+                "you have selected issue with Windows os Please discribe your issue!"
+            )
+            y = input(">")
+
+            print("we are looking on your issue!")
+            delay = time.sleep(1)
+            print("enter your email address \'ex:abc@gmail.com'")
+            email = input('>')
+            for i in range(3):
+                print(".", end="")
+
+                for j in range(2):
+                    print(".", end="")
+                    delay = time.sleep(1)
+                print()
+
+            print(
+                f"our Team has raised a ticket! on your issue will get in touch  sortly\n  Response will be given to {email}\n\n"
+            )
+
+    if y == '2' or y == 'hardware issue':
+        print(
+            "please select the issue you are facing ! \n 1.Blank screen \n 2.No audio \n 3.Noise from the cabinet"
+        )
+        y = input(">")
+        if y == '1' or y == 'blank screen':
+            print(
+                "you have selected issue with Blank screen application Please describe your issue!"
+            )
+            y = input(">")
+
+            print("we are looking on your issue!")
+            delay = time.sleep(1)
+            print("enter your email address \'ex:abc@gmail.com'")
+            email = input('>')
+            for i in range(3):
+                print(".", end="")
+
+                for j in range(2):
+                    print(".", end="")
+                    delay = time.sleep(1)
+                print()
+            print(
+                f"our Team has raised a ticket! on your issue will get in touch  sortly\n  Response will be given to {email}\n\n"
+            )
+
+        if y == '2' or y == 'No audio':
+            print(
+                "you have selected issue with No audio Please describe your issue!"
+            )
+            y = input(">")
+
+            print("we are looking on your issue!")
+            delay = time.sleep(1)
+            print("enter your email address \'ex:abc@gmail.com'")
+            email = input('>')
+            for i in range(3):
+                print(".", end="")
+
+                for j in range(2):
+                    print(".", end="")
+                    delay = time.sleep(1)
+                print()
+
+            print(
+                f"our Team has raised a ticket! on your issue will get in touch  sortly\n  Response will be given to {email}\n\n"
+            )
+
+        if y == '3' or y == 'Noise from the cabinet':
+            print(
+                "you have selected issue with Noise from the cabinet Please describe your issue!"
+            )
+            y = input(">")
+
+            print("we are looking on your issue!")
+            delay = time.sleep(1)
+            print("enter your email address \'ex:abc@gmail.com'")
+            email = input('>')
+            for i in range(3):
+                print(".", end="")
+
+                for j in range(2):
+                    print(".", end="")
+                    delay = time.sleep(1)
+                print()
+            print(
+                f"our Team has raised a ticket! on your issue will get in touch  sortly\n  Response will be given to {email}\n\n"
+            )
+
+    if y == '3' or y == 'exit':
+        print(f"Thank you!!{names}")
+        break

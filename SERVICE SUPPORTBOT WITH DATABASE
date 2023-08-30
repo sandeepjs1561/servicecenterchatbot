@@ -1,9 +1,12 @@
 import time
 import pandas as pd
 import numpy.random as np
-data=pd.read_csv('database.csv')#
-hey={'NAME':[],'ISSUE':[],'EMAIL':[],'ticket_id':[]};
-data=pd.DataFrame(hey)
+issue = ""
+email = ""
+ticketno = ""
+
+hey ={'NAME':[],'ISSUE':[],'EMAIL':[],'ticket_id':[]}
+data =pd.DataFrame(hey)
 data.to_csv('database.csv', mode='a', index=False, header=False)
 
 
@@ -15,77 +18,88 @@ print(f"Hello {names} how can i help you today")
 while True:
         print(
             "please select the following type of issue from below!\n 1.Software issue\t 2.Hardware issue \t 3.exit")
-        y = input(">")
-        if y == '1' or y == 'software issue':
+        yo = input(">")
+        if yo == '1' or yo == 'software issue':
             print(
                 "please select the product your facing the issue \n 1.TALLY \n 2.MSoffice package \n 3.WINDOWS OS \n 4.other"
             )
-            option = input(">")
-            if option == '1' or option == 'tally':
-                print("1.Unable to backup database\t2.Unable to print &report the data \t 3.Data entry error \t4.other")
-                inpo=int(input(">"))
-                if inpo==1:
-                    print("try saving the backup to different location or drive")
-                elif inpo==2:
-                    print("if unable to print and reports in tally verify printer connections and ensure proper printer settings")
-                elif inpo==3:
-                    print("For data entry errors in Tally, review and correct the entered data before saving. Utilize Tally's data validation features to minimize mistakes.")
-
-                else :
-                    print("Please describe your issue")
-
-                    issue = input(">")
-
-                    print("we are looking on your issue!")
-                    delay = time.sleep(1)
-                    print("enter your email address \'ex:abc@gmail.com'")
-                    email = input('>')
-                    ticketno = np.randint(1, 100)
-                    for i in range(2):
-                        print(".", end="")
-
-                        for j in range(2):
-                            print(".", end="")
-                            delay = time.sleep(2)
-                        print()
-
+            while True:
+                option = input(">")
+                if option == '1' or option == 'tally':
                     print(
-                        f"our Team has raised a ticket!{ticketno} on your issue will get in touch  sortly\n  Response will be given to {email}\n\n"
-                    )
-                break
-            if option == '2' or option == 'msoffice':
-                print(
-                    "you have selected issue with Msoffice application Please describe your issue!"
-                )
-                print("1.Printing problems\t2.Formatting and content errors\t3.Deletion or overwriting\t4.other")
-                inpo=int(input(">"))
-                if inpo==1:
-                    print("For MS Office printing problems, verify the printer connections, ensure the correct printer is selected, and troubleshoot by using the Print Preview option before printing.")
-                elif inpo==2:
-                    print("For formatting and content errors in MS Office, carefully review and adjust formatting settings, and use the Undo feature if changes are unintended.")
-                elif inpo==3:
-                    print("For preventing deletion or overwriting errors, regularly back up important files, enable AutoSave to minimize loss, and use version history or backups to recover overwritten files.")
-                else:
-                    print("Please describe your issue")
-                    issue = input(">")
+                        "1.Unable to backup database\t2.Unable to print &report the data \t 3.Data entry error \t4.other\t 5.exit")
+                    inpo = input(">")
+                    if inpo == '1':
+                        print("try saving the backup to different location or drive")
 
-                    print("we are looking on your issue!")
-                    delay = time.sleep(1)
-                    print("enter your email address \'ex:abc@gmail.com'")
-                    email = input('>')
-                    ticketno = np.randint(1, 100)
-                    for i in range(2):
-                        print(".", end="")
+                    elif inpo == '2':
+                        print(
+                            "if unable to print and reports in tally verify printer connections and ensure proper printer settings")
 
-                        for j in range(2):
+                    elif inpo == '3':
+                        print(
+                            "For data entry errors in Tally, review and correct the entered data before saving. Utilize Tally's data validation features to minimize mistakes.")
+
+                    elif inpo=='4':
+
+                        print("Please describe your issue")
+                        issue = input(">")
+
+                        print("we are looking on your issue!")
+                        delay = time.sleep(1)
+                        print("enter your email address \'ex:abc@gmail.com'")
+                        email = input('>')
+                        ticketno = np.randint(1, 100)
+                        for i in range(2):
                             print(".", end="")
-                            delay = time.sleep(2)
-                        print()
 
-                    print(
-                        f"our Team has raised a ticket!{ticketno} on your issue will get in touch  sortly\n  Response will be given to {email}\n\n"
-                    )
+                            for j in range(2):
+                                print(".", end="")
+                                delay = time.sleep(2)
+                            print()
+
+
+                        print(
+                            f"our Team has raised a ticket!{ticketno} on your issue will get in touch  sortly\n  Response will be given to {email}\n\n"
+                        )
+                    else:
+                        print("Invalid input. Please select a valid option.")
+
+                if option == '2' or option == 'msoffice':
+                 print("you have selected issue with Msoffice application Please describe your issue!"  )
+                 print("1.Printing problems\t2.Formatting and content errors\t3.Deletion or overwriting\t4.other")
+                 inpo=input(">")
+                 if inpo=='1':
+                       print("For MS Office printing problems, verify the printer connections, ensure the correct printer is selected, and troubleshoot by using the Print Preview option before printing.")
+                 elif inpo=='2':
+                       print("For formatting and content errors in MS Office, carefully review and adjust formatting settings, and use the Undo feature if changes are unintended.")
+                 elif inpo=='3':
+                       print("For preventing deletion or overwriting errors, regularly back up important files, enable AutoSave to minimize loss, and use version history or backups to recover overwritten files.")
+                 elif inpo=='4':
+                       print("Please describe your issue")
+                       issue = input(">")
+                       print("we are looking on your issue!")
+                       delay = time.sleep(1)
+                       print("enter your email address \'ex:abc@gmail.com'")
+                       email = input('>')
+                       ticketno = np.randint(1, 100)
+                       for i in range(2):
+                           print(".", end="")
+
+                           for j in range(2):
+                               print(".", end="")
+                               delay = time.sleep(2)
+                           print()
+
+                       print(
+                           f"our Team has raised a ticket!{ticketno} on your issue will get in touch  sortly\n  Response will be given to {email}\n\n"
+                       )
+
+
                 break
+
+
+
 
             if option == '3' or option == 'windowsos':
 
@@ -93,14 +107,14 @@ while True:
                     "you have selected issue with Windows os Please describe your issue!"
                 )
                 print("1.Blue Screen Error\t2.Windows update failure\t3.Driver issues\t4.other")
-                inpo=int(input(">"))
-                if inpo==1:
+                inpo=input(">")
+                if inpo=='1':
                     print("For Windows OS blue screen errors, note the error code, restart your computer, and update drivers. If the issue persists, check for hardware problems or contact us")
-                elif inpo==2:
+                elif inpo=='2':
                     print("For Windows update failures, check your internet connection, restart your computer, and run the Windows Update Troubleshooter. If issues persist contact us")
-                elif inpo==3:
+                elif inpo=='3':
                     print("For driver issues, update drivers from the manufacturer's website, use Windows' Device Manager to search for driver updates automatically, and consider rolling back to a previous version if new drivers are causing problems.")
-                else:
+                elif inpo=='4':
                     print("Please describe your issue")
                     issue = input(">")
 
@@ -121,6 +135,9 @@ while True:
                         f"our Team has raised a ticket!{ticketno} on your issue will get in touch  sortly\n  Response will be given to {email}\n\n"
                     )
                 break
+
+
+
             if option == '4' or option == "other":
                 print("Please describe your issue")
                 issue = input(">")
@@ -142,7 +159,7 @@ while True:
                 )
 
 
-        elif y == '2' or y == 'hardware issue':
+        elif yo == '2' or yo == 'hardware issue':
             print(
                 "please select the issue you are facing ! \n 1.display issues \n 2.No audio \n 3.other"
             )
@@ -154,12 +171,12 @@ while True:
                     "you have selected issue with display issues application Please describe your issue!"
                 )
                 print("1.lines on the screen\t2.blank screen\t3.screen blinking\t4.other")
-                inpo=int(input(">"))
-                if inpo==1:
+                inpo=input(">")
+                if inpo=='1':
                     print("For display issues with lines on the screen, check cable connections, update graphics drivers, and test the monitor on another computer to determine if it's a hardware problem.")
-                elif inpo==2:
+                elif inpo=='2':
                     print("If facing a blank screen, check monitor connections, ensure the monitor is powered on, and test with a different cable if necessary.")
-                elif inpo==3:
+                elif inpo=='3':
                     print("If experiencing screen blinking, update graphics drivers and adjust display refresh rate settings if needed.")
                 else:
                     print("Please describe your issue")
@@ -187,19 +204,18 @@ while True:
 
 
 
-
             if option == '2' or option == 'No audio':
 
                 print(
                     "you have selected issue with No audio Please describe your issue!"
                 )
                 print("1.disturbed audio quality\t2.beep sound\t3.no sound\t4.other")
-                inpo=int(input(">"))
-                if inpo==1:
+                inpo=input(">")
+                if inpo=='1':
                     print("For disturbed audio quality, check audio connections, update audio drivers, and verify if external factors like interference are affecting the sound.")
-                elif inpo==2:
+                elif inpo=='2':
                     print("If hearing beep sounds, refer to your computer's motherboard manual or documentation to interpret the beep codes and identify hardware issues.")
-                elif inpo==3:
+                elif inpo=='3':
                     print("If there's no sound, check audio connections, ensure speakers or headphones are functioning, and troubleshoot audio settings or drivers.")
                 else:
                     issue = input(">")
@@ -221,6 +237,9 @@ while True:
                     )
 
                 break
+
+
+
             if option=='3' or option=="other":
                 print("Please describe your issue")
                 issue = input(">")
@@ -245,21 +264,24 @@ while True:
 
 
 
-        if y == '3' or y == 'exit':
+        if yo == '3' or yo == 'exit':
 
             break
         hey['NAME'].append(names)
         hey['ISSUE'].append(issue)
         hey['EMAIL'].append(email)
         hey['ticket_id'].append(ticketno)
+        another_issue = input("Do you have any more issues? (yes or no): ")
+        if another_issue.lower() != 'yes':
+            break
 data = pd.DataFrame(hey)
-data.to_csv('database.csv', mode='a', index=False, header=False)
+data.to_csv('unnatidatabase.csv', mode='a', index=False, header=False)
 print(f"Thank you!!{names}")
-print("RATE US (1 - 5)")
+print("Please rate our service from 1 to 5")
 rating=input(">")
-data=pd.read_csv('feedback.csv')
-hey={'NAME':[],'rating':[]};
+data=pd.read_csv('feedbackdata.csv')
+hey={'NAME':[],'rating':[]}
 hey['NAME'].append(names)
 hey['rating'].append(rating)
 reviews=pd.DataFrame(hey)
-reviews.to_csv('feedback.csv',mode='a',index=False,header=False)
+reviews.to_csv('feedbackdata.csv',mode='a',index=False,header=False)

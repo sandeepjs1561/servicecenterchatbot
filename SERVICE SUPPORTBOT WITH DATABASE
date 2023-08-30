@@ -60,7 +60,7 @@ while True:
 
 
                         print(
-                            f"our Team has raised a ticket!{ticketno} on your issue will get in touch  sortly\n  Response will be given to {email}\n\n"
+                            f"our Team has raised a ticket:-{ticketno} on your issue will get in touch  sortly\n  Response will be given to {email}\n\n"
                         )
                     else:
                         print("Invalid input. Please select a valid option.")
@@ -92,7 +92,7 @@ while True:
                            print()
 
                        print(
-                           f"our Team has raised a ticket!{ticketno} on your issue will get in touch  sortly\n  Response will be given to {email}\n\n"
+                           f"our Team has raised a ticket:-{ticketno} on your issue will get in touch  sortly\n  Response will be given to {email}\n\n"
                        )
 
 
@@ -132,9 +132,9 @@ while True:
                         print()
 
                     print(
-                        f"our Team has raised a ticket!{ticketno} on your issue will get in touch  sortly\n  Response will be given to {email}\n\n"
+                        f"our Team has raised a ticket:-{ticketno} on your issue will get in touch  sortly\n  Response will be given to {email}\n\n"
                     )
-                break
+                    break
 
 
 
@@ -155,7 +155,7 @@ while True:
                         delay = time.sleep(2)
                     print()
                 print(
-                    f"our Team has raised a ticket!{ticketno} on your issue will get in touch  sortly\n  Response will be given to {email}\n\n"
+                    f"our Team has raised a ticket:-{ticketno} on your issue will get in touch  sortly\n  Response will be given to {email}\n\n"
                 )
 
 
@@ -197,7 +197,7 @@ while True:
                     print(
                         f"our Team has raised a ticket!{ticketno} on your issue will get in touch  sortly\n  Response will be given to {email}\n\n"
                     )
-                break
+                    break
 
 
 
@@ -236,7 +236,7 @@ while True:
                         f"our Team has raised a ticket!{ticketno} on your issue will get in touch  sortly\n  Response will be given to {email}\n\n"
                     )
 
-                break
+                    break
 
 
 
@@ -259,13 +259,13 @@ while True:
                 print(
                     f"our Team has raised a ticket!{ticketno} on your issue will get in touch  sortly\n  Response will be given to {email}\n\n"
                 )
+                break
 
 
 
 
 
         if yo == '3' or yo == 'exit':
-
             break
         hey['NAME'].append(names)
         hey['ISSUE'].append(issue)
